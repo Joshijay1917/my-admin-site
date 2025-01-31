@@ -1,6 +1,7 @@
 import mongoose from "mongoose"
 import express from "express"
 import { user } from "./models/userdata.js"
+import cors from "cors"
 const app = express()
 const port = 3000
 let currentusers = [];
@@ -14,6 +15,7 @@ app.set(`view engine`, `ejs`)
 app.use(express.static('views'))
 app.use(express.text());
 app.use(express.json());
+app.use(cors());
 
 app.get(`/`, async (req, res) => {
     res.render('welcome')
