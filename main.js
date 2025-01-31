@@ -20,7 +20,7 @@ app.get(`/`, async (req, res) => {
 })
 
 app.get(`/display`, async (req, res) => {
-    res.render("index")
+    res.sendFile("./index.html", {root:"D:\\Web Devlopment\\my admin site\\views"})
 })
 
 app.get('/update', async (req, res) => {
