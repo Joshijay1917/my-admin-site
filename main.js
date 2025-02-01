@@ -2,8 +2,14 @@ import mongoose from "mongoose"
 import express from "express"
 import { user } from "./models/userdata.js"
 import cors from "cors"
+import path from "path";
+import { filepath } from "url"
+
 const app = express()
 const port = 3000
+const __filename = filepath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 let currentusers = [];
 let currentpasswords = []
 let currentemails = []
@@ -12,7 +18,7 @@ let currentid
 
 await mongoose.connect("mongodb+srv://jayjoshi1912007:FV1KaJpRIv2BpkYJ@cluster0.2ohrr.mongodb.net//Company")
 app.set(`view engine`, `ejs`)
-app.use(express.static('views'))
+app.use("/views", express.static(path.join(__dirname, "views")));
 app.use(express.text());
 app.use(express.json());
 app.use(cors());
