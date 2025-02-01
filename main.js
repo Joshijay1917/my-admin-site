@@ -3,11 +3,11 @@ import express from "express"
 import { user } from "./models/userdata.js"
 import cors from "cors"
 import path from "path";
-import { filepath } from "url"
+import { fileURLToPath } from "url"
 
 const app = express()
 const port = 3000
-const __filename = filepath(import.meta.url);
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 let currentusers = [];
