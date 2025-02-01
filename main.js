@@ -19,11 +19,7 @@ let currentid
 await mongoose.connect("mongodb+srv://jayjoshi1912007:FV1KaJpRIv2BpkYJ@cluster0.2ohrr.mongodb.net//Company")
 app.set(`view engine`, `ejs`)
 app.set("views", path.join(__dirname, "views"))
-<<<<<<< HEAD
 app.use("/views", express.static(path.join(__dirname, "views")));
-=======
-app.use("/views", express.static(path.join(__dirname, "views")));
->>>>>>> e316d41c4cf8728c19272d54f0eedcfb6038a057
 app.use(express.text());
 app.use(express.json());
 app.use(cors());
