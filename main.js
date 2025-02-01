@@ -28,7 +28,8 @@ app.get(`/`, async (req, res) => {
 })
 
 app.get(`/display`, async (req, res) => {
-    res.sendFile("./index.html", {root:"D:\\Web Devlopment\\my admin site\\views"})
+    const filepath1 = path.join(__dirname, "views", "index.html")
+    res.sendFile(filepath1)
 })
 
 app.get('/update', async (req, res) => {
