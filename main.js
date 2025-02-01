@@ -18,6 +18,7 @@ let currentid
 
 await mongoose.connect("mongodb+srv://jayjoshi1912007:FV1KaJpRIv2BpkYJ@cluster0.2ohrr.mongodb.net//Company")
 app.set(`view engine`, `ejs`)
+app.set("views", path.join(__dirname, "views"))
 app.use("/views", express.static(path.join(__dirname, "views")));
 app.use(express.text());
 app.use(express.json());
