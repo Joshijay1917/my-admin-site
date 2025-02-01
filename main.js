@@ -16,7 +16,7 @@ let currentemails = []
 let objectsid = []
 let currentid
 
-await mongoose.connect("mongodb+srv://jayjoshi1912007:FV1KaJpRIv2BpkYJ@cluster0.2ohrr.mongodb.net//Company")
+await mongoose.connect("mongodb+srv://jayjoshi1912007:FV1KaJpRIv2BpkYJ@cluster0.2ohrr.mongodb.net/Company?retryWrites=true&w=majority")
 app.set(`view engine`, `ejs`)
 app.set("views", path.join(__dirname, "views"))
 app.use("/views", express.static(path.join(__dirname, "views")));
