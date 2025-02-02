@@ -160,3 +160,24 @@ th {
     width: 5vw;
     margin: auto;
 }
+
+@media screen and (max-width:700px) {
+    .blur{
+        width: 252vw;
+        height: 227vh;
+    }
+    .editcontainer{
+        margin: 0 46vw;
+        padding: 15vw;
+    }
+    .done{
+        padding: 4vw 4vw;
+        padding-right: 12vw;
+        text-align: center;
+    }
+    .container{
+        margin: 0 46vw;
+        padding: 10vw;
+        width: 100vw;
+    }
+}
