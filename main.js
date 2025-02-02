@@ -4,7 +4,6 @@ import { user } from "./models/userdata.js"
 import cors from "cors"
 import path from "path";
 import { fileURLToPath } from "url"
-import "dotenv/config";
 
 const app = express()
 const port = 3000
